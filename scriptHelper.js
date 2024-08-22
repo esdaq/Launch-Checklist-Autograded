@@ -54,7 +54,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
   let launchStatus = document.getElementById("launchStatus");
   let cargoStatus = document.getElementById("cargoStatus");
 
-  event.preventDefault();
+  //event.preventDefault();
   if (validateInput(pilot) === "Empty"  || validateInput(copilot) === "Empty" ||
     validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
     alert("All fields are required!");
