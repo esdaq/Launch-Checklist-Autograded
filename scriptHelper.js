@@ -54,12 +54,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
   let launchStatus = document.getElementById("launchStatus");
   let cargoStatus = document.getElementById("cargoStatus");
 
-  //event.preventDefault();
   if (validateInput(pilot) === "Empty"  || validateInput(copilot) === "Empty" ||
     validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-    alert("All fields are required!");
+      event.preventDefault();
+      alert("All fields are required!");
   } else if(validateInput(pilot) === "Is a Number"  || validateInput(copilot) === "Is a Number" ||
   validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
+    event.preventDefault();
     alert("Make sure to enter valid information for each field!");
   } else {
 
