@@ -93,9 +93,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
  }
  
  async function myFetch() {
-     let planetsReturned;
  
-     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+     const planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
       return response.json();
     }); 
      return planetsReturned;
@@ -103,7 +102,8 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
  
  function pickPlanet(planets) {
   // Uses random function
-  return planets[Math.floor(Math.random() * planets.length + 1)];
+  let randomIndex = Math.random() * planets.length + 1;
+  return planets[Math.floor(randomIndex)];
  }
  
  module.exports.addDestinationInfo = addDestinationInfo;
