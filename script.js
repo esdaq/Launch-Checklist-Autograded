@@ -22,6 +22,7 @@ window.addEventListener("load", function() {
     }); 
     let launchForm = document.querySelector("form");
     launchForm.addEventListener("submit", function(event) {
+      event.preventDefault();
       let faultyItems = document.getElementById("faultyItems");
       let pilotNameInput = document.querySelector("input[name=pilotName]");
       let copilotNameInput = document.querySelector("input[name=copilotName]");
